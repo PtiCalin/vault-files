@@ -1,0 +1,98 @@
+name: 🔄 Format Conversion Issue
+description: Report issues specific to document format conversion
+title: "[Conversion]: "
+labels: ["conversion", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues with document format conversion quality or functionality.
+
+  - type: dropdown
+    id: source-format
+    attributes:
+      label: Source Format
+      options:
+        - PDF
+        - Markdown
+        - DOCX
+        - PPTX
+        - HTML
+        - TXT
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-format
+    attributes:
+      label: Target Format
+      options:
+        - PDF
+        - Markdown
+        - DOCX
+        - PPTX
+        - HTML
+        - TXT
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-category
+    attributes:
+      label: Issue Category
+      options:
+        - Layout/Formatting Loss
+        - Text Content Issues
+        - Image Handling
+        - Table Conversion
+        - Style/Font Problems
+        - Metadata Loss
+        - Performance/Speed
+        - File Size Issues
+        - Crash/Error
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Describe what goes wrong during conversion
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-output
+    attributes:
+      label: Expected Output
+      description: What should the converted document look like?
+
+  - type: textarea
+    id: actual-output
+    attributes:
+      label: Actual Output
+      description: What does the converted document actually look like?
+
+  - type: input
+    id: sample-file
+    attributes:
+      label: Sample Document
+      description: Link to sample file that demonstrates the issue
+      placeholder: https://example.com/sample.pdf
+
+  - type: checkboxes
+    id: fidelity-issues
+    attributes:
+      label: Fidelity Issues (select all that apply)
+      options:
+        - label: Fonts are incorrect or missing
+        - label: Colors are wrong
+        - label: Images are distorted or missing
+        - label: Tables are malformed
+        - label: Layout is broken
+        - label: Links are broken
+        - label: Metadata is lost
+        - label: Special characters are incorrect

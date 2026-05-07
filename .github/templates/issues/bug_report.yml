@@ -1,0 +1,140 @@
+name: 🐛 Bug Report
+description: Report a bug in document conversion or processing
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component is affected?
+      options:
+        - PDF Converter
+        - Markdown Processor
+        - DOCX Handler
+        - PPTX Generator
+        - Document Editor
+        - Document Viewer
+        - OCR Engine
+        - Template System
+        - Plugin System
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Open document '...'
+        2. Convert to format '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input-format
+    attributes:
+      label: Input Format
+      options:
+        - PDF
+        - Markdown
+        - DOCX
+        - PPTX
+        - HTML
+        - TXT
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: output-format
+    attributes:
+      label: Output Format (if conversion issue)
+      options:
+        - PDF
+        - Markdown
+        - DOCX
+        - PPTX
+        - HTML
+        - TXT
+        - Other
+        - N/A
+
+  - type: input
+    id: file-size
+    attributes:
+      label: Document Size
+      description: Approximate size of the document
+      placeholder: e.g., 5MB, 100 pages
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide your environment details
+      value: |
+        - OS: [e.g., Windows 11, macOS 13, Ubuntu 22.04]
+        - Node.js Version: [e.g., 18.17.0]
+        - vault-files Version: [e.g., 1.0.0]
+        - Browser (if applicable): [e.g., Chrome 120]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs
+      description: Please paste any relevant error messages or logs
+      render: shell
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample Document
+      description: If possible, provide a link or description of a sample document that reproduces the issue
+      placeholder: Link to sample or description
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues to ensure this isn't a duplicate
+          required: true
+        - label: I have tested with the latest version
+          required: true
+        - label: I have included all relevant error messages and logs
+          required: true
