@@ -4,13 +4,19 @@
   "description": "The ultimate file conversion & document management ecosystem",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "vf": "dist/cli/bin/vf.js",
+    "vault-files": "dist/cli/bin/vf.js"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch project/src/index.ts",
+    "dev:cli": "tsx project/cli/bin/vf.ts",
     "build": "tsc && tsc-alias",
     "build:watch": "tsc --watch",
+    "build:cli": "npm run build && chmod +x dist/cli/bin/vf.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -46,10 +52,15 @@
   "dependencies": {
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.15.0",
+    "pdf-parse": "^1.1.1",
     "marked": "^12.0.2",
     "docx": "^8.5.0",
     "mammoth": "^1.7.2",
     "pptxgenjs": "^3.12.0",
+    "commander": "^12.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "glob": "^10.3.12",
     "sharp": "^0.33.3",
     "tesseract.js": "^5.0.5",
     "jszip": "^3.10.1",
@@ -60,6 +71,8 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
     "@types/mime-types": "^2.1.4",
+    "@types/glob": "^8.1.0",
+    "@types/pdf-parse": "^1.1.4",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.57.0",

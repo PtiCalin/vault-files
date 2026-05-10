@@ -37,6 +37,6 @@
       "@types/*": ["project/src/types/*"]
     }
   },
-  "include": ["project/src/**/*", "lib/**/*"],
+  "include": ["project/src/**/*", "project/cli/**/*", "lib/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
