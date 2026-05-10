@@ -2,7 +2,8 @@
  * Converters module exports
  */
 
-export * from './pdf'
-export * from './markdown'
-export * from './docx'
-export * from './pptx'
+export * from "./docx";
+export * from "./image";
+export * from "./markdown";
+export * from "./pdf";
+export * from "./pptx";
