@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "streetsidesoftware.code-spell-checker",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-vsliveshare.vsliveshare",
+    "editorconfig.editorconfig",
+    "visualstudioexptteam.vscodeintellicode",
+    "ms-vscode.test-adapter-converter",
+    "firsttris.vscode-jest-runner",
+    "orta.vscode-jest",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "bierner.markdown-mermaid",
+    "github.copilot"
+  ],
+  "unwantedRecommendations": []
+}

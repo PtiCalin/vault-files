@@ -1,0 +1,63 @@
+# Code Owners
+
+# This file defines individuals or teams responsible for code review
+# in specific parts of the vault-files repository.
+
+# Syntax:
+# pattern    @username @org/team-name
+# The last matching pattern takes precedence.
+
+# Default owners for everything (unless overridden below)
+* @PtiCalin
+
+# Core processing engine
+/src/core/ @PtiCalin
+/lib/ @PtiCalin
+
+# Format-specific converters
+/src/converters/pdf/ @PtiCalin
+/src/converters/markdown/ @PtiCalin
+/src/converters/docx/ @PtiCalin
+/src/converters/pptx/ @PtiCalin
+
+# Editor and viewer components
+/src/editor/ @PtiCalin
+/src/viewer/ @PtiCalin
+
+# Plugin system
+/src/plugins/ @PtiCalin
+
+# Templates
+/src/templates/ @PtiCalin
+/templates/ @PtiCalin
+
+# Tests
+/tests/ @PtiCalin
+
+# Documentation
+/docs/ @PtiCalin
+*.md @PtiCalin
+
+# GitHub infrastructure
+/.github/ @PtiCalin
+
+# Configuration files
+/.vscode/ @PtiCalin
+/.claude/ @PtiCalin
+package.json @PtiCalin
+tsconfig.json @PtiCalin
+.gitignore @PtiCalin
+
+# Security-sensitive files (require explicit approval)
+/SECURITY.md @PtiCalin
+/LICENSE.md @PtiCalin
+
+# Release and versioning
+/.github/versionning/ @PtiCalin
+/CHANGELOG.md @PtiCalin
+
+# As the project grows, add more specific owners:
+# /src/converters/pdf/ @pdf-team
+# /src/converters/markdown/ @markdown-team
+# /src/editor/ @editor-team
+# /tests/ @testing-team
