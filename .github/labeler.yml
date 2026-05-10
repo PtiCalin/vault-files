@@ -1,0 +1,71 @@
+# Labeler configuration for automatic PR labeling
+# https://github.com/actions/labeler
+
+# Core engine
+"area: core":
+  - src/core/**/*
+  - lib/**/*
+
+# Converters
+"area: converters":
+  - src/converters/**/*
+
+"converter: pdf":
+  - src/converters/pdf/**/*
+
+"converter: markdown":
+  - src/converters/markdown/**/*
+
+"converter: docx":
+  - src/converters/docx/**/*
+
+"converter: pptx":
+  - src/converters/pptx/**/*
+
+# UI Components
+"area: editor":
+  - src/editor/**/*
+
+"area: viewer":
+  - src/viewer/**/*
+
+# Plugins
+"area: plugins":
+  - src/plugins/**/*
+
+# Templates
+"area: templates":
+  - src/templates/**/*
+  - templates/**/*
+
+# Tests
+"tests":
+  - tests/**/*
+  - "**/*.test.ts"
+  - "**/*.test.js"
+  - "**/*.spec.ts"
+  - "**/*.spec.js"
+
+# Documentation
+"documentation":
+  - "**/*.md"
+  - docs/**/*
+
+# GitHub infrastructure
+"github":
+  - .github/**/*
+
+# Configuration
+"configuration":
+  - "*.json"
+  - "*.yml"
+  - "*.yaml"
+  - .editorconfig
+  - .gitignore
+
+# Dependencies
+"dependencies":
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - pnpm-lock.yaml
